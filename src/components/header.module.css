@@ -1,0 +1,22 @@
+#app-header {
+  padding: 1rem;
+  border-bottom: 1px solid #3e3e3e;
+  background-color: #313131;
+}
+
+#app-header ul {
+  display: flex;
+  gap: 0.2rem;
+  margin: 0;
+  justify-content: center;
+}
+
+#app-header ul li a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  transition: background-color .15s linear;
+}
+
+#app-header ul li a:hover {
+  background-color: #242424;
+}

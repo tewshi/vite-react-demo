@@ -1,0 +1,26 @@
+.stopwatch {
+  padding: 1rem;
+  border: 1px solid #3e3e3e;
+  background-color: #313131;
+  border-radius: .6rem;;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 2rem auto;
+  max-width: max-content;
+}
+
+.stopwatch .time {
+  font-family: monospace, sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+
+}
+
+.stopwatch .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
