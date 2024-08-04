@@ -1,13 +1,12 @@
-import { ReactNode, MouseEventHandler } from 'react'
+import { ReactNode, ButtonHTMLAttributes } from 'react'
 import styles from '@/components/button.module.css'
 import classnames from 'classnames'
 
-type ButtonProps = {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
   color?: 'primary' | 'secondary' | 'info' | 'warning' | 'destructive'
   size?: 'sm' | 'md' | 'lg'
-  disabled?: boolean
-  onClick?: MouseEventHandler<HTMLButtonElement>
+  full?: boolean
 }
 
 function Button({
@@ -15,11 +14,17 @@ function Button({
   disabled,
   color = 'primary',
   size = 'md',
+  full,
   onClick,
 }: ButtonProps) {
   return (
     <button
-      className={classnames(styles.btn, styles[color], styles[size])}
+      className={classnames(
+        styles.btn,
+        styles[color],
+        styles[size],
+        full && styles.full
+      )}
       onClick={onClick}
       disabled={disabled}
     >

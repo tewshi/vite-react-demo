@@ -61,33 +61,39 @@ function Stopwatch() {
         <Button
           disabled={state !== StopwatchState.idle}
           onClick={onStart}
+          full
         >
           Start
         </Button>
-        {state !== StopwatchState.paused && (
+        <div className="flex w-full gap-2">
+          {state !== StopwatchState.paused && (
+            <Button
+              color="secondary"
+              disabled={state === StopwatchState.idle}
+              onClick={onPause}
+              full
+            >
+              Pause
+            </Button>
+          )}
+          {state === StopwatchState.paused && (
+            <Button
+              color="info"
+              onClick={onResume}
+              full
+            >
+              Resume
+            </Button>
+          )}
           <Button
-            color="secondary"
+            color="destructive"
             disabled={state === StopwatchState.idle}
-            onClick={onPause}
+            onClick={onReset}
+            full
           >
-            Pause
+            Reset
           </Button>
-        )}
-        {state === StopwatchState.paused && (
-          <Button
-            color="info"
-            onClick={onResume}
-          >
-            Resume
-          </Button>
-        )}
-        <Button
-          color="destructive"
-          disabled={state === StopwatchState.idle}
-          onClick={onReset}
-        >
-          Reset
-        </Button>
+        </div>
       </div>
     </div>
   )

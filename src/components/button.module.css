@@ -25,7 +25,8 @@
 }
 
 .btn.sm {
-  @apply px-[0.6rem] py-[.4rem];
+  @apply px-[0.6rem] py-[.2rem];
+  font-size: smaller;
 }
 
 .btn.md {
@@ -34,4 +35,8 @@
 
 .btn.lg {
   @apply px-[1.8rem] py-[.8rem];
+}
+
+.btn.full {
+  @apply w-full;
 }
