@@ -1,45 +1,37 @@
 .btn {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-.btn:hover {
-  border-color: #646cff;
-}
-
-.btn:focus,
-.btn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  @apply rounded-lg border border-transparent text-white ring-white focus:ring-1 dark:text-inherit;
+  @apply cursor-pointer font-medium transition duration-200;
+  @apply outline-none focus-within:outline-none focus:outline-none disabled:cursor-not-allowed;
 }
 
 .btn.primary {
-  background-color: #646cff;
+  @apply bg-primary-500 hover:bg-primary-600 active:bg-primary-700;
+  @apply disabled:bg-primary-100 disabled:text-primary-400 dark:disabled:bg-primary-700/20 dark:disabled:text-primary-100/50;
 }
 
 .btn.secondary {
-  background-color: #a33ad0;
+  @apply bg-secondary-500 hover:bg-secondary-600 active:bg-secondary-700;
+  @apply disabled:bg-secondary-100 disabled:text-secondary-400 dark:disabled:bg-secondary-700/20 dark:disabled:text-secondary-100/50;
 }
 
 .btn.info {
-  background-color: #0c669e;
+  @apply bg-info-500 hover:bg-info-600 active:bg-info-700;
+  @apply disabled:bg-info-100 disabled:text-info-400 dark:disabled:bg-info-700/20 dark:disabled:text-info-100/50;
 }
 
 .btn.destructive {
-  background-color: #9e0c33;
+  @apply bg-destructive-500 hover:bg-destructive-600 active:bg-destructive-700;
+  @apply disabled:bg-destructive-100 disabled:text-destructive-400 dark:disabled:bg-destructive-700/20 dark:disabled:text-destructive-100/50;
 }
 
-.btn:disabled {
-  cursor: not-allowed;
-  background-color: #242424;
+.btn.sm {
+  @apply px-[0.6rem] py-[.4rem];
 }
 
-.btn:disabled:hover {
-  border-color: transparent;
+.btn.md {
+  @apply px-[1.2rem] py-[.6rem];
+}
+
+.btn.lg {
+  @apply px-[1.8rem] py-[.8rem];
 }

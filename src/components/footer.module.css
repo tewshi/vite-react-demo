@@ -1,8 +1,4 @@
 #app-footer {
-  padding: 0.4rem;
-  margin-top: auto;
-  border-top: 1px solid #3e3e3e;
-  background-color: #313131;
+  @apply mt-auto border-t bg-[#f8f8f8] p-2 text-center dark:border-t-[#3e3e3e] dark:bg-[#313131];
   font-size: smaller;
-  text-align: center;
 }

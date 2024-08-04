@@ -1,22 +1,15 @@
 #app-header {
-  padding: 1rem;
-  border-bottom: 1px solid #3e3e3e;
-  background-color: #313131;
+  @apply border-b bg-[#f8f8f8] p-4 dark:border-b-[#3e3e3e] dark:bg-[#313131];
 }
 
 #app-header ul {
-  display: flex;
-  gap: 0.2rem;
-  margin: 0;
-  justify-content: center;
+  @apply m-0 flex justify-center gap-1;
 }
 
 #app-header ul li a {
-  padding: 0.5rem 0.8rem;
-  border-radius: 0.4rem;
-  transition: background-color .15s linear;
+  @apply rounded-md px-3 py-2 transition-[background-color] duration-150 ease-linear;
 }
 
 #app-header ul li a:hover {
-  background-color: #242424;
+  @apply bg-white dark:bg-[#242424];
 }

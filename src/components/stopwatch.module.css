@@ -1,12 +1,6 @@
 .stopwatch {
-  padding: 1rem;
-  border: 1px solid #3e3e3e;
-  background-color: #313131;
-  border-radius: .6rem;;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  margin: 2rem auto;
+  @apply rounded-lg border dark:border-[#3e3e3e] dark:bg-[#313131];
+  @apply mx-auto flex flex-col gap-5 p-4;
   max-width: max-content;
 }
 
@@ -15,12 +9,8 @@
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1;
-
 }
 
 .stopwatch .controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
+  @apply flex flex-wrap justify-center gap-2;
 }

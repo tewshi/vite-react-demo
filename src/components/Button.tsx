@@ -5,13 +5,26 @@ import classnames from 'classnames'
 type ButtonProps = {
   children: ReactNode
   color?: 'primary' | 'secondary' | 'info' | 'warning' | 'destructive'
+  size?: 'sm' | 'md' | 'lg'
   disabled?: boolean
   onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
-function Button({ children, disabled, color = 'primary', onClick }: ButtonProps) {
+function Button({
+  children,
+  disabled,
+  color = 'primary',
+  size = 'md',
+  onClick,
+}: ButtonProps) {
   return (
-    <button className={classnames(styles.btn, styles[color])} onClick={onClick} disabled={disabled}>{children}</button>
+    <button
+      className={classnames(styles.btn, styles[color], styles[size])}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
   )
 }
 
