@@ -1,5 +1,5 @@
 #app-header {
-  @apply border-b bg-[#f8f8f8] p-4 dark:border-b-[#3e3e3e] dark:bg-[#313131];
+  @apply relative border-b bg-[#f8f8f8] p-4 dark:border-b-[#3e3e3e] dark:bg-[#313131];
 }
 
 #app-header ul {
@@ -12,4 +12,9 @@
 
 #app-header ul li a:hover {
   @apply bg-white dark:bg-[#242424];
+}
+
+#app-header .theme-switcher {
+  @apply absolute right-2;
+  top: calc(50% - 18.5px);
 }
