@@ -1,32 +1,44 @@
-import { ReactNode, ButtonHTMLAttributes } from 'react'
-import styles from '@/components/button.module.css'
+import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
 import classnames from 'classnames'
+import styles from '@/components/button.module.css'
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  children: ReactNode
-  color?: 'primary' | 'secondary' | 'info' | 'warning' | 'destructive'
+type ButtonProps = PropsWithChildren<
+  ButtonHTMLAttributes<HTMLButtonElement>
+> & {
+  color?:
+    | 'default'
+    | 'primary'
+    | 'secondary'
+    | 'info'
+    | 'warning'
+    | 'destructive'
   size?: 'sm' | 'md' | 'lg'
   full?: boolean
+  icon?: boolean
+  variant?: 'filled' | 'outlined'
 }
 
-function Button({
+const Button: FC<ButtonProps> = ({
   children,
-  disabled,
   color = 'primary',
   size = 'md',
+  variant = 'filled',
   full,
-  onClick,
-}: ButtonProps) {
+  icon,
+  ...restProps
+}: ButtonProps) => {
   return (
     <button
+      {...restProps}
       className={classnames(
         styles.btn,
         styles[color],
         styles[size],
-        full && styles.full
+        styles[variant],
+        full && styles.full,
+        icon && styles.icon,
+        restProps.className
       )}
-      onClick={onClick}
-      disabled={disabled}
     >
       {children}
     </button>

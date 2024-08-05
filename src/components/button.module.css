@@ -4,24 +4,44 @@
   @apply outline-none focus-within:outline-none focus:outline-none disabled:cursor-not-allowed;
 }
 
-.btn.primary {
+.btn.filled.primary {
   @apply bg-primary-500 hover:bg-primary-600 active:bg-primary-700;
   @apply disabled:bg-primary-100 disabled:text-primary-400 dark:disabled:bg-primary-700/20 dark:disabled:text-primary-100/50;
 }
 
-.btn.secondary {
+.btn.filled.secondary {
   @apply bg-secondary-500 hover:bg-secondary-600 active:bg-secondary-700;
   @apply disabled:bg-secondary-100 disabled:text-secondary-400 dark:disabled:bg-secondary-700/20 dark:disabled:text-secondary-100/50;
 }
 
-.btn.info {
+.btn.filled.info {
   @apply bg-info-500 hover:bg-info-600 active:bg-info-700;
   @apply disabled:bg-info-100 disabled:text-info-400 dark:disabled:bg-info-700/20 dark:disabled:text-info-100/50;
 }
 
-.btn.destructive {
+.btn.filled.destructive {
   @apply bg-destructive-500 hover:bg-destructive-600 active:bg-destructive-700;
   @apply disabled:bg-destructive-100 disabled:text-destructive-400 dark:disabled:bg-destructive-700/20 dark:disabled:text-destructive-100/50;
+}
+
+.btn.outlined.primary {
+  @apply border-primary-500 text-primary-500 hover:border-primary-700 active:border-primary-800;
+  @apply disabled:border-primary-200 disabled:text-primary-200 dark:disabled:bg-primary-700/20 dark:disabled:text-primary-100/50;
+}
+
+.btn.outlined.secondary {
+  @apply border-secondary-500 text-secondary-500 hover:border-secondary-700 active:border-secondary-800;
+  @apply disabled:border-secondary-200 disabled:text-secondary-200 dark:disabled:bg-secondary-700/20 dark:disabled:text-secondary-100/50;
+}
+
+.btn.outlined.info {
+  @apply border-info-500 text-info-500 hover:border-info-700 active:border-info-800;
+  @apply disabled:border-info-200 disabled:text-info-200 dark:disabled:bg-info-700/20 dark:disabled:text-info-100/50;
+}
+
+.btn.outlined.destructive {
+  @apply border-destructive-500 text-destructive-500 hover:border-destructive-700 active:border-destructive-800;
+  @apply disabled:border-destructive-200 disabled:text-destructive-200 dark:disabled:bg-destructive-700/20 dark:disabled:text-destructive-100/50;
 }
 
 .btn.sm {
@@ -39,4 +59,16 @@
 
 .btn.full {
   @apply w-full;
+}
+
+.btn.sm.icon {
+  @apply p-[.2rem];
+}
+
+.btn.md.icon {
+  @apply p-[.6rem];
+}
+
+.btn.lg.icon {
+  @apply p-[.8rem];
 }
