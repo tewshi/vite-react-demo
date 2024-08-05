@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import Button from '@/components/Button'
 import styles from '@/components/stopwatch.module.css'
 
@@ -8,7 +8,7 @@ enum StopwatchState {
   paused,
 }
 
-function Stopwatch() {
+const Stopwatch: FC = () => {
   const [time, setTime] = useState(0)
   const intervalId = useRef(0)
   const [state, setState] = useState<StopwatchState>(StopwatchState.idle)
