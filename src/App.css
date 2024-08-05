@@ -3,5 +3,5 @@
 }
 
 #app-main {
-  @apply p-4 text-center;
+  @apply p-4;
 }

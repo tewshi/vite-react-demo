@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 type ThemeState = 'light' | 'dark' | 'system'
 
@@ -57,11 +57,14 @@ const useThemeMode = (): [ThemeState | null, (mode?: ThemeState) => void] => {
     }
   }
 
-  const handleSystemThemeChange = ({ matches }: MediaQueryListEvent) => {
-    if (![ThemeMode.dark, ThemeMode.light].includes(localStorage.theme)) {
-      applySystemMode(matches)
-    }
-  }
+  const handleSystemThemeChange = useCallback(
+    ({ matches }: MediaQueryListEvent) => {
+      if (![ThemeMode.dark, ThemeMode.light].includes(localStorage.theme)) {
+        applySystemMode(matches)
+      }
+    },
+    []
+  )
 
   useEffect(initThemeMode, [])
 
