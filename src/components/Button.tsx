@@ -15,7 +15,7 @@ type ButtonProps = PropsWithChildren<
   size?: 'sm' | 'md' | 'lg'
   full?: boolean
   icon?: boolean
-  variant?: 'filled' | 'outlined'
+  variant?: 'filled' | 'outlined' | 'flat'
 }
 
 const Button: FC<ButtonProps> = ({

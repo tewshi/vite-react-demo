@@ -32,7 +32,7 @@ const Header: FC = () => {
       <Button
         className={styles['theme-switcher']}
         color="info"
-        variant="outlined"
+        variant="flat"
         icon
         onClick={() => setMode()}
       >

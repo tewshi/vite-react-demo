@@ -44,6 +44,26 @@
   @apply disabled:border-destructive-200 disabled:text-destructive-200 dark:disabled:bg-destructive-700/20 dark:disabled:text-destructive-100/50;
 }
 
+.btn.flat.primary {
+  @apply text-primary-500 hover:text-primary-700 active:text-primary-800;
+  @apply disabled:text-primary-200 dark:disabled:text-primary-100/50;
+}
+
+.btn.flat.secondary {
+  @apply text-secondary-500 hover:text-secondary-700 active:text-secondary-800;
+  @apply disabled:text-secondary-200 dark:disabled:text-secondary-100/50;
+}
+
+.btn.flat.info {
+  @apply text-info-500 hover:text-info-700 active:text-info-800;
+  @apply disabled:text-info-200 dark:disabled:text-info-100/50;
+}
+
+.btn.flat.destructive {
+  @apply text-destructive-500 hover:text-destructive-700 active:text-destructive-800;
+  @apply disabled:text-destructive-200 dark:disabled:text-destructive-100/50;
+}
+
 .btn.sm {
   @apply px-[0.6rem] py-[.2rem];
   font-size: smaller;
