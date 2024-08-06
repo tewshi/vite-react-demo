@@ -1,10 +1,8 @@
-import { ButtonHTMLAttributes, FC, PropsWithChildren } from 'react'
+import { ButtonHTMLAttributes, FC } from 'react'
 import classnames from 'classnames'
 import styles from '@/components/button.module.css'
 
-type ButtonProps = PropsWithChildren<
-  ButtonHTMLAttributes<HTMLButtonElement>
-> & {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   color?:
     | 'default'
     | 'primary'
