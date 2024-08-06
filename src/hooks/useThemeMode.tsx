@@ -13,8 +13,9 @@ const useThemeMode = (): [ThemeState | null, (mode?: ThemeState) => void] => {
   const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
 
   const initThemeMode = () => {
-    if ([ThemeMode.dark, ThemeMode.light].includes(localStorage.theme)) {
-      setThemeMode(localStorage.theme)
+    const savedTheme = localStorage.theme as ThemeMode
+    if ([ThemeMode.dark, ThemeMode.light].includes(savedTheme)) {
+      setThemeMode(savedTheme)
     } else {
       setThemeMode(ThemeMode.system)
     }
@@ -59,7 +60,11 @@ const useThemeMode = (): [ThemeState | null, (mode?: ThemeState) => void] => {
 
   const handleSystemThemeChange = useCallback(
     ({ matches }: MediaQueryListEvent) => {
-      if (![ThemeMode.dark, ThemeMode.light].includes(localStorage.theme)) {
+      if (
+        ![ThemeMode.dark, ThemeMode.light].includes(
+          localStorage.theme as ThemeMode
+        )
+      ) {
         applySystemMode(matches)
       }
     },

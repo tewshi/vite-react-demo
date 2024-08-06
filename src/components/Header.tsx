@@ -34,7 +34,9 @@ const Header: FC = () => {
         color="info"
         variant="flat"
         icon
-        onClick={() => setMode()}
+        onClick={() => {
+          setMode()
+        }}
       >
         {mode === 'light' && <SunIcon className="w-4" />}
         {mode === 'dark' && <MoonIcon className="w-4" />}

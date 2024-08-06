@@ -20,7 +20,9 @@ const Stopwatch: FC = () => {
       }, 10)
     }
 
-    return () => clearInterval(intervalId.current)
+    return () => {
+      clearInterval(intervalId.current)
+    }
   }, [state])
 
   const onStart = () => {
