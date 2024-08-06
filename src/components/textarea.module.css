@@ -1,0 +1,24 @@
+.wrapper {
+  @apply flex flex-col gap-2;
+}
+
+.wrapper.disabled label {
+  @apply opacity-65;
+}
+
+.wrapper.full {
+  @apply w-full;
+}
+
+.textarea {
+  @apply rounded-lg border text-inherit ring-[#e5e7eb] focus:ring-1;
+  @apply dark:border-[#3e3e3e] dark:bg-[#313131] dark:ring-[#5b5b5b];
+  @apply max-h-[6lh] min-h-[3lh] resize-none px-3 py-2 leading-5 transition duration-200;
+  @apply outline-none focus-within:outline-none focus:outline-none;
+  @apply read-only:border-dotted disabled:cursor-not-allowed disabled:opacity-65;
+  field-sizing: content;
+}
+
+.textarea.full {
+  @apply w-full;
+}

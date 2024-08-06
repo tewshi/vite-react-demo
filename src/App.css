@@ -3,5 +3,5 @@
 }
 
 #app-main {
-  @apply p-4;
+  @apply flex flex-col gap-4 p-4;
 }

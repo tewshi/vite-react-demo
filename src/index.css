@@ -4,7 +4,7 @@
 
 @layer {
   :root {
-    @apply text-[#213547] dark:text-white/[0.87] bg-[#ffffff] dark:bg-[#242424];
+    @apply bg-[#ffffff] text-[#494949] dark:bg-[#242424] dark:text-white/[0.87];
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -13,6 +13,6 @@
   }
 
   body {
-    @apply flex min-w-80 min-h-screen;
+    @apply flex min-h-screen min-w-80;
   }
 }
