@@ -1,5 +1,3 @@
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
 import globals from 'globals'
 import pluginJs from '@eslint/js'
 import tseslint from 'typescript-eslint'
@@ -7,7 +5,7 @@ import pluginReact from 'eslint-plugin-react'
 
 export default [
   { files: ['**/*.{js,ts,tsx}'] },
-  { ignores: ['*.config.js'] },
+  { ignores: ['*.config.js', 'dist'] },
   {
     languageOptions: {
       globals: globals.browser,
@@ -19,7 +17,7 @@ export default [
           './tsconfig.node.json',
           './tsconfig.app.json',
         ],
-        tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
+        tsconfigRootDir: import.meta.dirname,
       },
     },
     settings: { react: { version: '^18.3' } },
